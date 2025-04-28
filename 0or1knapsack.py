@@ -1,32 +1,21 @@
-def knapSack(W, wt, val, n): 
- 
-    # Base Case 
-    if n == 0 or W == 0: 
-        return 0
- 
-    # If weight of the nth item is 
-    # more than Knapsack of capacity W, 
-    # then this item cannot be included 
-    # in the optimal solution 
-    if (wt[n-1] > W): 
-        return knapSack(W, wt, val, n-1) 
- 
-    # return the maximum of two cases: 
-    # (1) nth item included 
-    # (2) not included 
-    else: 
-        return max( 
-            val[n-1] + knapSack( 
-                W-wt[n-1], wt, val, n-1), 
-            knapSack(W, wt, val, n-1)) 
- 
-# end of function knapSack 
- 
- 
-# Driver Code 
-if __name__ == '__main__': 
-    profit = [60, 100, 120] 
-    weight = [10, 20, 30] 
-    W = 50
-    n = len(profit) 
-    print knapSack(W, weight, profit, n) 
+# Problem: 0/1 Knapsack
+# Time: O(n * W), Space: O(n * W)
+
+def knapsack(weights, values, W):
+    n = len(weights)
+    dp = [[0] * (W+1) for _ in range(n+1)]
+    
+    for i in range(1, n+1):
+        for w in range(1, W+1):
+            if weights[i-1] <= w:
+                dp[i][w] = max(values[i-1] + dp[i-1][w-weights[i-1]], dp[i-1][w])
+            else:
+                dp[i][w] = dp[i-1][w]
+    
+    return dp[n][W]
+
+# Example
+weights = [1, 3, 4, 5]
+values = [1, 4, 5, 7]
+W = 7
+print("Maximum value:", knapsack(weights, values, W))  # Output: 9
