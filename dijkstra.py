@@ -19,7 +19,7 @@ def dijkstra(graph, start):
     
     return distances
 
-# Example
+
 graph = {
     'A': [('B', 1), ('C', 4)],
     'B': [('C', 2), ('D', 5)],
