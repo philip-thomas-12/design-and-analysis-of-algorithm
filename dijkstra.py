@@ -26,4 +26,5 @@ graph = {
     'C': [('D', 1)],
     'D': []
 }
+
 print(dijkstra(graph, 'A'))
