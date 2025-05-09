@@ -18,4 +18,5 @@ def knapsack(weights, values, W):
 weights = [1, 3, 4, 5]
 values = [1, 4, 5, 7]
 W = 7
+
 print("Maximum value:", knapsack(weights, values, W))  # Output: 9
