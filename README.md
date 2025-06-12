@@ -15,7 +15,6 @@ This repository contains Python implementations of key algorithms commonly studi
 | `topological_sort.py`   | Performs topological sort of a Directed Acyclic Graph (DAG) using DFS. |
 | `graph_coloring.py`     | Solves the Graph Coloring problem using backtracking. |
 | `hamiltonian_cycle.py`  | Uses backtracking to find a Hamiltonian Cycle in a graph (if it exists). |
-| `n_queens.py`           | Backtracking solution to the N-Queens problem. |
 | `subset_sum.py`         | Determines if a subset with a given sum exists using recursion + dynamic programming. |
 | `job_sequencing.py`     | Greedy algorithm for the Job Sequencing Problem with deadlines and profits. |
 
