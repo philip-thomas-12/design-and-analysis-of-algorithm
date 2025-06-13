@@ -1,5 +1,6 @@
 # DAA Algorithm Implementations in Python
 
+
 This repository contains Python implementations of key algorithms commonly studied in **Design and Analysis of Algorithms (DAA)**. Each file demonstrates a well-known algorithm with clean, concise, and readable code.
 
 ---
