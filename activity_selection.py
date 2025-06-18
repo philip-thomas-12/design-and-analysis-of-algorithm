@@ -14,5 +14,6 @@ def activity_selection(activities):
 
 # Example
 activities = [(1, 4), (3, 5), (0, 6), (5, 7), (8, 9), (5, 9)]
+
 selected = activity_selection(activities)
 print("Selected Activities:", selected)
